@@ -1,0 +1,433 @@
+.auteur{
+    border: solid;
+    margin-left: 200px;
+    margin-top: 20px;
+    transition: transform 0.9s ease-in-out;
+}
+.auteur:hover {
+    border-radius: 20px;
+    border: hidden transparent;
+    transform: scale(1.1);
+}
+.auteur:hover ~ * {
+    filter: blur(2px);
+}
+body{
+    font-family:Arial;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(216, 208, 208);
+}
+.contact{
+    display: flex;
+    margin-left: 400px;
+    text-align: center;
+}
+.description_projets{
+    max-width:250px;
+}
+em{
+    color: red;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+#entete_documents{
+    display: inline;
+    font-size: 20px;
+    color: cadetblue;
+    padding: 10px;
+    text-decoration: none;
+    
+}
+
+
+
+#entete_documents:hover{
+    cursor: pointer;
+    border: solid rgb(134, 134, 232);
+    border-radius: 50px;
+}
+#entete_documents:focus{
+    background-color: cadetblue;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    background-color: black;
+    height: 100px;
+    padding-top: 20px;
+}
+.git{
+    margin: 0 50px 0 50px;
+}
+#h{
+    font-family: fantasy;
+    font-size: 25px;
+    margin: 10px;
+    text-align: center;
+
+    
+}
+h1{
+    text-align: center;
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+h4{
+    margin-left: 5px;
+    text-decoration: underline;
+    color: cadetblue;
+}
+h6{
+    width: 80px;
+    height: 25px;
+    color: cadetblue;
+    border: solid;
+    border-width: 1px;
+    margin-left: 100px;
+    padding-top: 10px;
+    background-color: black;
+    
+}
+hr{
+    width: 900px;
+    background-color: cadetblue;
+}
+
+.ico{
+    height: 40px;
+    width: 40px;
+}
+img{
+    width:300px; 
+    height:200px;
+}
+.img1{
+    padding: 5px;
+    width: 290px;
+    height: 220px;
+}
+.info{
+    text-align: justify;
+    font-weight: 700;
+    margin-right: 300px;
+    margin-bottom: 100px;
+    
+}
+kbd{
+    color: blue;
+    font-size: 20px;
+}
+.lien{
+    color: black;
+    
+}
+.moi{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 110px;
+    
+}
+#nav_prim{
+    background-color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 1px;
+}
+#nav_sec{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background-image: url(b884c98f-b0cf-4afe-830d-7c6efba913c9.jpg);
+    transition: background-image 0.5s ease;
+    position: sticky; top: 0; z-index: 100;
+}
+
+
+#nav_sec:hover{
+    color:rgb(39, 66, 204);
+    background-image: url(fb073e29-da6e-4ed7-a89e-c5fbe7bcb852.jpg);    
+}
+.nav{
+    background-color: white;
+    padding: 10px 25px 10px 25px;
+    margin: 10px ;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    color:cadetblue;
+    font-size: 20px;
+    font-weight: bold;
+    float: right;
+}
+.nav:hover{
+    color:rgb(12, 46, 216);   
+}
+p{
+    padding: 5px;
+}
+#page_informations{
+    cursor: pointer;
+    font-size: 24px;
+    transition: all 0.2s ease-in-out;
+    margin-top: Opx;
+}
+#page_projets{
+    display: flex;
+    margin-left: 20px;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.projet_1{
+    border: rgb(0, 0, 0) solid;
+    margin: 30px;
+    width: 300px;
+    background-color: white;
+    text-align: center;
+}
+.projet_1:hover {
+    border-radius: 3px ;
+    border-color: rgb(100, 100, 227);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.projet_1:hover ~ * {
+    filter: blur(2px);
+}
+#propos{
+    background-image: url(IMG-20250613-WA0125.jpg);
+}
+/* .section1{
+    background-image: url(IMG-20250613-WA0125.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.section2{
+    background-image: url(IMG-20250613-WA0121.jpg);
+    height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.section3{
+    background-image: url(IMG-20250613-WA0125.jpg);
+    height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.section4{
+    background-image: url(IMG-20250613-WA0125.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+.ul1{
+    display: block;
+    
+}
+.ul2{
+    display: block;
+}
+.ul3{
+    display: block;
+}
+.ul{
+    display: flex;
+    border: dashed;
+    margin: 100px;
+    padding: 100px;
+    margin-bottom: 200px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.ul:hover{
+    background-image: url(hero-img.png);
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.voir{
+    text-decoration: none;
+}
+
+/* ========== PORTFOLIO MODE PORTRAIT ========== */
+#portfolio-portrait {
+    display: none;
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+    /* Masquer le portfolio normal */
+    section {
+        display: none;
+    }
+    
+    footer {
+        display: none;
+    }
+    
+    /* Afficher le portfolio portrait */
+    #portfolio-portrait {
+        display: block;
+        width: 100%;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 20px 0;
+    }
+    
+    .portrait-section {
+        max-width: 100%;
+        width: 100%;
+        background: white;
+        min-height: 100vh;
+        padding: 20px;
+        margin-top: 70px;
+    }
+    
+    .portrait-header {
+        text-align: center;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px 20px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .portrait-header h1 {
+        margin: 0;
+        font-size: 36px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .portrait-subtitle {
+        margin: 10px 0 0 0;
+        font-size: 16px;
+        color: rgba(255,255,255,0.9);
+    }
+    
+    .portrait-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 5px solid #667eea;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+    
+    .portrait-card {
+        background: #f8f9fa;
+        border-left: 5px solid #667eea;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .portrait-card h2 {
+        color: #667eea;
+        margin: 0 0 15px 0;
+        font-size: 18px;
+    }
+    
+    .portrait-card p {
+        margin: 8px 0;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #333;
+    }
+    
+    .portrait-project {
+        margin: 12px 0;
+        padding: 10px;
+        background: white;
+        border-radius: 5px;
+        border-left: 3px solid #764ba2;
+    }
+    
+    .portrait-project h3 {
+        margin: 0 0 5px 0;
+        font-size: 14px;
+        color: #764ba2;
+    }
+    
+    .portrait-project p {
+        margin: 0;
+        font-size: 12px;
+        color: #666;
+    }
+    
+    .contact-portrait a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .contact-portrait a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Navigation adaptée */
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+        z-index: 100;
+        background: rgba(255,255,255,0.95) !important;
+    }
+    
+    .nav {
+        float: none;
+        display: inline-block;
+        padding: 8px 10px;
+        margin: 3px;
+        font-size: 11px;
+        border-radius: 20px;
+    }
+}
+
+/* Très petit écran portrait */
+@media (orientation: portrait) and (max-width: 480px) {
+    .portrait-header h1 {
+        font-size: 28px;
+    }
+    
+    .portrait-header {
+        padding: 20px 15px;
+    }
+    
+    .portrait-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .portrait-card {
+        padding: 15px;
+        margin: 10px 0;
+    }
+    
+    .portrait-card h2 {
+        font-size: 16px;
+    }
+    
+    .portrait-card p {
+        font-size: 13px;
+    }
+}
+
+/* Mode paysage - garder le design normal */
+@media (orientation: landscape) {
+    #portfolio-portrait {
+        display: none;
+    }
+    
+    section {
+        display: block !important;
+    }
+    
+    footer {
+        display: block !important;
+    }
+}
