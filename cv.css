@@ -9,16 +9,16 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ddd;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     color: var(--text-color);
 }
 
 .cv-container {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
     background: white;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 1fr;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
@@ -26,21 +26,24 @@ body {
 .sidebar {
     background-color: var(--primary-color);
     color: white;
-    padding: 30px 20px;
+    padding: 20px;
 }
 
 .profile-img img {
     width: 100%;
+    max-width: 200px;
     border-radius: 5px;
     margin-bottom: 20px;
     border: 3px solid white;
+    display: block;
+    margin: 0 auto 20px auto;
 }
 
 .sidebar h3 {
     border-bottom: 2px solid var(--accent-color);
     padding-bottom: 5px;
     font-size: 1.1rem;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .sidebar p, .sidebar li {
@@ -50,7 +53,7 @@ body {
 
 /* Main Content */
 .main-content {
-    padding: 40px;
+    padding: 20px;
 }
 
 header {
@@ -61,13 +64,15 @@ header {
 header h1 {
     margin: 0;
     color: var(--primary-color);
-    font-size: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .subtitle {
     color: var(--accent-color);
     font-weight: bold;
     margin-top: 5px;
+    text-align: center;
 }
 
 h2 {
@@ -75,7 +80,7 @@ h2 {
     font-size: 1.3rem;
     border-left: 5px solid var(--accent-color);
     padding-left: 10px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .item {
@@ -97,23 +102,57 @@ h2 {
 #nav_prim{
     background-color: white;
     font-weight: bold;
-    text-align: left;
-    padding: 1px;
+    text-align: center;
+    padding: 10px;
+}
+
+#nav_prim ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav{
     background-color: white;
-    padding: 10px 25px 10px 25px;
-    margin: 10px ;
+    padding: 8px 15px;
+    margin: 5px;
     border: none;
     border-radius: 50px;
     text-decoration: none;
     color:cadetblue;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
-    float: right;
+    display: inline-block;
 }
 
 .nav:hover{
     color:rgb(12, 46, 216);   
+}
+
+/* Tablette - layout deux colonnes */
+@media (min-width: 768px) {
+    .cv-container {
+        grid-template-columns: 30% 70%;
+        max-width: 900px;
+    }
+    
+    .sidebar {
+        padding: 30px 20px;
+    }
+    
+    .main-content {
+        padding: 40px;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+    
+    .subtitle {
+        text-align: left;
+    }
 }
