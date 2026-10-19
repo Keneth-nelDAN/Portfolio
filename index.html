@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Keneth DANNON | Développeur Web Full-Stack</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="author" content="Keneth DANNON">
+    <meta name="description" content="Portfolio de Keneth DANNON, développeur web full-stack à Cotonou (Bénin) : sites web, applications, WordPress et design UI/UX.">
+    <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://TON-DOMAINE.com/">
+    <meta property="og:site_name" content="Keneth DANNON — Portfolio">
+    <meta property="og:title" content="Keneth DANNON — Développeur Web Full-Stack">
+    <meta property="og:description" content="Sites web, applications et WordPress à Cotonou (Bénin). Découvrez mes projets et contactez-moi pour donner vie à vos idées.">
+    <meta property="og:image" content="https://TON-DOMAINE.com/img/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Keneth DANNON, développeur web full-stack">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="profile:first_name" content="Keneth">
+    <meta property="profile:last_name" content="DANNON">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Keneth DANNON — Développeur Web Full-Stack">
+    <meta name="twitter:description" content="Sites web, applications et WordPress à Cotonou (Bénin). Découvrez mes projets et contactez-moi.">
+    <meta name="twitter:image" content="https://TON-DOMAINE.com/img/og-cover.jpg">
+
+    <!-- Bonus SEO -->
+    <link rel="canonical" href="https://TON-DOMAINE.com/">
+    <meta name="theme-color" content="#0d6efd">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨🏾‍💻</text></svg>">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Dark mode (ajout) -->
+    <style>
+        body.dark-mode { background-color: #181818; color: #f5f5f5; }
+        body.dark-mode .bg-light { background-color: #1f1f1f !important; }
+        body.dark-mode .bg-white { background-color: #242424 !important; }
+        body.dark-mode .service-item { background-color: #242424 !important; }
+        body.dark-mode .text-dark { color: #f5f5f5 !important; }
+        body.dark-mode .navbar-light .navbar-nav .nav-link { color: #dddddd; }
+        body.dark-mode .navbar-light .navbar-nav .nav-link.active,
+        body.dark-mode .navbar-light .navbar-nav .nav-link:hover { color: var(--primary); }
+        body.dark-mode hr { border-color: #444; }
+    </style>
+</head>
+
+<!--<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="110"> -->
+<body>
+    <!-- Thème : applique le choix enregistré AVANT l'affichage -->
+    <script>
+        (function () {
+            var saved = null;
+            try { saved = localStorage.getItem('theme'); } catch (e) {}
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.body.classList.add('dark-mode');
+            }
+        })();
+    </script>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Chargement...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="liquidGlass-wrapper fixed-top">
+        <div class="liquidGlass-effect"></div>
+        <div class="liquidGlass-tint"></div>
+        <div class="liquidGlass-shine"></div>
+        <div class="liquidGlass-text">
+            <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-4 px-lg-5">
+                <a href="#home" class="navbar-brand d-block d-lg-none">
+                    <h1 class="text-primary fw-bold m-0">KD.</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="#home" class="nav-item nav-link active">Accueil</a>
+                        <a href="#about" class="nav-item nav-link">À propos</a>
+                        <a href="#skill" class="nav-item nav-link">Compétences</a>
+                        <a href="#service" class="nav-item nav-link">Services</a>
+                    </div>
+                    <a href="#home" class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
+                        <h1 class="text-primary fw-bold m-0">KD.</h1>
+                    </a>
+                    <div class="navbar-nav me-auto py-0">
+                        <a href="#project" class="nav-item nav-link">Projets</a>
+                        <a href="#testimonial" class="nav-item nav-link">Témoignages</a>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="ms-lg-3">
+                        <button class="btn btn-square btn-primary" id="theme-toggle" aria-label="Changer de thème"><i class="fa fa-moon"></i></button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-light" id="home">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                    <h3 class="text-primary mb-3">Je suis</h3>
+                    <h1 class="display-3 mb-3">Keneth DANNON</h1>
+                    <h2 class="typed-text-output d-inline"></h2>
+                    <div class="typed-text d-none">Développeur Web, Développeur Full-Stack, Hacker éthique et Pentester, Designer UI/UX, Graphiste</div>
+                    <div class="d-flex align-items-center pt-5">
+                        <!-- ✏️ Exporte ton CV (CV/cv.html) en PDF et place-le ici -->
+                        <a href="CV/DANNON_Mahugnon_Nellys_Keneth_UATM_GASA_Formation_Abomey-Calavi_CV.pdf" download="CV_Keneth_DANNON.pdf" class="btn btn-primary py-3 px-4 me-5">Télécharger mon CV</a>
+                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            <!-- ✏️ Remplace l'ID YouTube ci-dessus par ta propre vidéo -->
+                            <span></span>
+                        </button>
+                        <h5 class="ms-4 mb-0 d-none d-sm-block">Voir la vidéo</h5>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- ✏️ Renomme ton image "img/profile.jpg" -->
+                    <img class="img-fluid rounded shadow" src="img/WhatsApp Image 2026-09-28 at 11.20.56.jpeg" alt="Portrait de Keneth DANNON">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Video Modal Start -->
+    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Vidéo de présentation</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-6" id="about">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="years flex-shrink-0 text-center me-4">
+                            <h1 class="display-1 mb-0">03</h1>
+                            <h5 class="mb-0">mois</h5>
+                        </div>
+                        <h3 class="lh-base mb-0">d'expérience professionnelle en tant que développeur web Fullstack & designer</h3>
+                    </div>
+                    <p class="mb-4">Durant cette période, j'ai été encadré par les experts de SICMA & Associés. Ils m'ont permis de consolider mes bases et de découvrir de nouvelles compétences à travers des projets concrets.</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Accompagnement personnalisé</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Travail pratique sur des projets réels</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Rigueur et bonne pratique du code</p>
+                    <a class="btn btn-primary py-3 px-5 mt-3" href="#contact">Me contacter</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <!-- ✏️ Renomme tes photos "img/about-1.jpg" et "img/about-2.jpg" -->
+                            <img class="img-fluid rounded" src="img/WhatsApp Image 2026-10-06 at 08.29.04.jpeg" style="height: 400px; width: 100%; object-fit: cover;" alt="Keneth au travail">
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/WhatsApp Image 2026-09-28 at 11.23.56.jpeg" style="height: 400px; width: 100%; object-fit: cover;" alt="Keneth lors d'une formation">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Compétences maîtrisées</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">5</h2>
+                    </div>
+                    <p class="mb-4">Je maîtrise plusieurs langages et outils de développement pour mener à bien des projets variés : HTML, CSS, PHP, JavaScript et WordPress.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Projets réalisés</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">2</h2>
+                    </div>
+                    <p class="mb-0">Des projets menés de bout en bout, de la conception à la mise en ligne, en appliquant les standards du développement web moderne.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Expertise Start -->
+    <div class="container-xxl py-6 pb-5" id="skill">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mb-5">Compétences & Expérience</h1>
+                    <p class="mb-4">Passionné par la résolution de problèmes, j'ai développé des compétences dans plusieurs domaines de la programmation et du développement logiciel.</p>
+                    <h3 class="mb-4">Mes compétences</h3>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">HTML</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">CSS</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">PHP</h6>
+                                    <h6 class="font-weight-bold">50%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">JavaScript</h6>
+                                    <h6 class="font-weight-bold">20%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Git & Outils</h6>
+                                    <h6 class="font-weight-bold">80%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">WordPress</h6>
+                                    <h6 class="font-weight-bold">90%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Expérience</button>
+                        </li>
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Formation</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>Développeur JavaScript</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2026</p>
+                                    <h6 class="mb-0">IWAJU Tech</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Développeur Full-Stack</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2026</p>
+                                    <h6 class="mb-0">SICMA & Associés</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Développeur Freelance</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">Depuis 2025</p>
+                                    <h6 class="mb-0"></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>Développement web</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2024 - 2026</p>
+                                    <h6 class="mb-0">UATM GASA Formation</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Développement mobile (Android / iOS)</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2025 - 2026</p>
+                                    <h6 class="mb-0">UATM GASA Formation</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Design UI/UX</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2025 - 2026</p>
+                                    <h6 class="mb-0">UATM GASA Formation</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Graphisme</h5>
+                                    <hr class="text-primary mb-0 my-2">
+                                    <p class="text-primary mb-1">2025</p>
+                                    <h6 class="mb-0">APEX BENIN</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Expertise End -->
+
+    <!-- Service Start -->
+    <div class="container-fluid bg-light my-5 py-6" id="service">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Mes Services</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="#contact">Engagez-moi</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Développement Web</h4>
+                            <h6 class="mb-3">À partir de 80.000 et <span class="text-primary">sur devis</span></h6>
+                            <span>Création de sites vitrines, blogs et applications web modernes, responsives et optimisés pour le référencement.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Développement Logiciel</h4>
+                            <h6 class="mb-3">À partir de 100.000 et <span class="text-primary">sur devis</span></h6>
+                            <span>Conception d'applications et d'outils sur mesure adaptés aux besoins spécifiques de votre activité.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-crop-alt fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Blog WordPress</h4>
+                            <h6 class="mb-3">À partir de 50.000 et <span class="text-primary">sur devis</span></h6>
+                            <span>Mise en place de blogs et sites WordPress professionnels, avec thèmes personnalisés et formation à l'utilisation.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-paint-brush fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Design UI/UX & Graphisme</h4>
+                            <h6 class="mb-3">À partir de 50.000 et <span class="text-primary">sur devis</span></h6>
+                            <span>Maquettes d'interfaces, identité visuelle, flyers et supports de communication adaptés à votre marque.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- Projects Start -->
+    <div class="container-xxl py-6 pt-5" id="project">
+        <div class="container">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Mes Projets</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                        <li class="mx-3 active" data-filter="*">Tous les projets</li>
+                        <li class="mx-3" data-filter=".first">Code</li>
+                        <li class="mx-3" data-filter=".second">No Code</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+                <!-- ✏️ Remplace les images project-1.jpg à project-6.jpg par tes vrais projets
+                     et ajoute les liens dans les <a href=""> (site en ligne, GitHub, Figma...) -->
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/BibliothèqueUniversitaire.png" alt="Projet UI/UX 1">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/BibliothèqueUniversitaire.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/Keneth-nelDAN" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/BlogGestionEtudiant.png" alt="Projet graphisme 2">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/BlogGestionEtudiant.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/Keneth-nelDAN" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/GestionCourriers.png" alt="Projet UI/UX 3">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/GestionCourriers.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/Keneth-nelDAN" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/GestionEtudiant.png" alt="Projet graphisme 4">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/GestionEtudiant.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/Keneth-nelDAN" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/GestonMemoire.png" alt="Projet UI/UX 5">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/GestonMemoire.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/Keneth-nelDAN" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/SiteGestionChorale.png" alt="Projet graphisme 6">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/SiteGestionChorale.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/Keneth-nelDAN" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/SiteGestionEglise.png" alt="Projet graphisme 6">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/SiteGestionEglise.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/Keneth-nelDAN" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/SiteWordPress.png" alt="Projet graphisme 6">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/SiteWordPress.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/Keneth-nelDAN" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/afficheEvenementpivot.jpeg" alt="Projet graphisme 6">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/afficheEvenement.jpeg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/Keneth-nelDAN" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid bg-light py-5 my-5" id="testimonial">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Témoignages</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="owl-carousel testimonial-carousel">
+                        <!-- ✏️ Demande de vrais témoignages à tes mentors/clients et remplace ces textes -->
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-1.jpg" alt="Photo du témoin 1">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Keneth a fait preuve de sérieux, de curiosité et de rigueur tout au long de son stage au sein de notre structure.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Nom du mentor</h5>
+                            <span>SICMA & Associés</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/WhatsApp Image 2026-09-28 at 15.50.03.jpeg" alt="Photo du témoin 2">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">J'aime trop la façon dont il est curieux. C'est une des choses qui m'attire chez lui</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Hélène DADJO</h5>
+                            <span>En qualité de ****** ****</span>
+                        </div>
+                        
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-2.jpg" alt="Photo du témoin 3">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Un développeur motivé, à l'écoute des besoins du client, qui livre un travail propre et dans les délais.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Nom du client</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-3.jpg" alt="Photo du témoin 4">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">J'ai adoré se site qu'il a réaliser pour moi. Grace à lui je peux désormais présenter un de mes projets touristiques en ligne.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Brice MEBO</h5>
+                            <span>Mèko</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-3.jpg" alt="Photo du témoin 5">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Son évolution technique est impressionnante : de débutant à développeur capable de mener des projets complets.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Nom du formateur</h5>
+                            <span>UATM GASA Formation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Contact Start -->
+    <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Travaillons ensemble</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="mailto:nellysdannon@gmail.com">Dites bonjour</a>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="mb-2">Mon bureau :</p>
+                    <h3 class="fw-bold">Cotonou, Bénin</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Appelez-moi :</p>
+                    <h3 class="fw-bold"><a href="tel:+2290154767999" class="text-decoration-none text-body">+229 01 54 76 79 99</a></h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Écrivez-moi :</p>
+                    <h3 class="fw-bold"><a href="mailto:nellysdannon@gmail.com" class="text-decoration-none text-body">nellysdannon@gmail.com</a></h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Suivez-moi :</p>
+                    <!-- ✏️ Ajoute les liens de tes vrais réseaux sociaux -->
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-primary me-2" href="https://x.com/NDannon5401" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.facebook.com/nellys.dannon/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/keneth-dannon-97b79a390/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://github.com/Keneth-nelDAN" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <p class="mb-4">Vous avez un projet ou une question ? Envoyez-moi un message et je vous répondrai dans les plus brefs délais.</p>
+                    <!-- ✏️ Inscris-toi gratuitement sur formspree.io, crée un formulaire
+                         et remplace "VOTRE_ID" ci-dessous par ton identifiant -->
+                    <form action="https://formspree.io/f/xgavrebl" method="POST">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
+                                    <label for="name">Votre nom</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" required>
+                                    <label for="email">Votre email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Sujet">
+                                    <label for="subject">Sujet</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Laissez votre message ici" id="message" name="message" style="height: 100px" required></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary py-3 px-5" type="submit">Envoyer le message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Map Start -->
+    <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-xxl pt-5 px-0">
+            <div class="bg-dark">
+                <iframe
+                src="https://www.google.com/maps?q=Cotonou%2C+B%C3%A9nin&output=embed"
+                frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0" title="Carte de Cotonou, Bénin"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Map End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <span id="year"></span> <a class="border-bottom text-secondary" href="https://www.linkedin.com/in/keneth-dannon-97b79a390/">Keneth DANNON</a>, Tous droits réservés.
+                </div>
+                <!-- Attribution obligatoire de la licence gratuite du template (ne pas retirer) -->
+                <!-- <div class="col-md-6 text-center text-md-end">
+                    Conçu par <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a>
+                    <br>Distribué par : <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- SVG Filter for Glass Effect -->
+    <svg style="display: none">
+      <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%" filterUnits="objectBoundingBox">
+        <feTurbulence type="fractalNoise" baseFrequency="0.01 0.01" numOctaves="1" seed="5" result="turbulence" />
+        <feComponentTransfer in="turbulence" result="mapped">
+          <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5" />
+          <feFuncG type="gamma" amplitude="0" exponent="1" offset="0" />
+          <feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5" />
+        </feComponentTransfer>
+        <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap" />
+        <feSpecularLighting in="softMap" surfaceScale="5" specularConstant="1" specularExponent="100" lighting-color="white" result="specLight">
+          <fePointLight x="-200" y="-200" z="300" />
+        </feSpecularLighting>
+        <feComposite in="specLight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litImage" />
+      </filter>
+    </svg>
+
+    <!-- WhatsApp Flottant Start -->
+    <a href="https://wa.me/2290154767999?text=Bonjour%20Keneth%2C%20j%27ai%20vu%20votre%20portfolio%20et%20je%20souhaite%20%C3%A9changer%20sur%20un%20projet."
+       class="whatsapp-float"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Discuter sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Discutons sur WhatsApp</span>
+    </a>
+    <!-- WhatsApp Flottant End -->
+    
+    <!-- Bouton flottant "Options" -->
+    <button class="options-float" id="options-toggle-btn" aria-label="Options du portfolio" aria-expanded="false">
+        <i class="fa fa-sliders-h"></i>
+    </button>
+
+    <!-- Overlay (fond assombri, clic = fermer) -->
+    <div class="options-overlay" id="options-overlay"></div>
+
+    <!-- Panneau d'options -->
+    <aside class="options-panel" id="options-panel" aria-hidden="true">
+        <div class="options-header">
+            <h5>Options du portfolio</h5>
+            <button class="options-close" id="options-close" aria-label="Fermer">&times;</button>
+        </div>
+        <div class="options-body">
+            <div class="option-item">
+                <div>
+                    <strong>Mode sombre</strong>
+                    <small>Confort visuel</small>
+                </div>
+                <div class="form-check form-switch m-0">
+                    <input class="form-check-input" type="checkbox" role="switch" id="opt-dark">
+                </div>
+            </div>
+            <div class="option-item">
+                <div>
+                    <strong>Version anglaise</strong>
+                    <small>index-en.html</small>
+                </div>
+                <div class="form-check form-switch m-0">
+                    <input class="form-check-input" type="checkbox" role="switch" id="opt-en"
+                           data-href="index-en.html" data-default="index.html">
+                </div>
+            </div>
+            <div class="option-item">
+                <div>
+                    <strong>Page CV</strong>
+                    <small>CV/cv.html</small>
+                </div>
+                <div class="form-check form-switch m-0">
+                    <input class="form-check-input" type="checkbox" role="switch" id="opt-cv"
+                           data-href="CV/cv.html" data-default="index.html">
+                </div>
+            </div>
+        </div>
+    </aside>
+    
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" aria-label="Retour en haut"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Dark mode + année automatique -->
+    <script>
+    (function () {
+        'use strict';
+
+        const body = document.body;
+        const root = document.documentElement;
+        const page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const canViewTransition = 'startViewTransition' in document && !reduceMotion;
+
+        /* ---------- 1. Thème sombre avec révélation circulaire ---------- */
+        const themeBtn = document.getElementById('theme-toggle');
+        const optDark  = document.getElementById('opt-dark');
+
+        function syncUI(isDark) {
+            if (optDark) optDark.checked = isDark;
+            if (themeBtn) {
+                const icon = themeBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-sun', isDark);
+                    icon.classList.toggle('fa-moon', !isDark);
+                }
+            }
+        }
+
+        function flipIcon() {
+            if (!themeBtn) return;
+            themeBtn.classList.remove('theme-anim');
+            void themeBtn.offsetWidth; // force le redémarrage de l'animation
+            themeBtn.classList.add('theme-anim');
+            themeBtn.addEventListener('animationend',
+                () => themeBtn.classList.remove('theme-anim'), { once: true });
+        }
+
+        function setDark(on, save, origin) {
+            const apply = () => {
+                body.classList.toggle('dark-mode', on);
+                if (save) { try { localStorage.setItem('theme', on ? 'dark' : 'light'); } catch (e) {} }
+                syncUI(on);
+            };
+
+            if (canViewTransition && origin) {
+                const x = origin.x, y = origin.y;
+                // Rayon = distance jusqu'au coin de l'écran le plus éloigné du clic
+                const r = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+                root.style.setProperty('--theme-x', x + 'px');
+                root.style.setProperty('--theme-y', y + 'px');
+                root.style.setProperty('--theme-r', r + 'px');
+
+                const vt = document.startViewTransition(apply);
+                vt.finished.then(flipIcon).catch(flipIcon);
+            } else {
+                apply();
+                flipIcon();
+            }
+        }
+
+        if (themeBtn) {
+            themeBtn.addEventListener('click', e =>
+                setDark(!body.classList.contains('dark-mode'), true,
+                        { x: e.clientX, y: e.clientY })
+            );
+        }
+        if (optDark) {
+            optDark.addEventListener('change', () => {
+                const rect = optDark.getBoundingClientRect(); // cercle depuis le switch
+                setDark(optDark.checked, true, {
+                    x: rect.left + rect.width / 2,
+                    y: rect.top + rect.height / 2
+                });
+            });
+        }
+        syncUI(body.classList.contains('dark-mode'));
+
+        /* ---------- 2. Panneau d'options ---------- */
+        const panel   = document.getElementById('options-panel');
+        const overlay = document.getElementById('options-overlay');
+        const openBtn = document.getElementById('options-toggle-btn');
+        const closeBtn = document.getElementById('options-close');
+
+        function setPanel(open) {
+            panel.classList.toggle('open', open);
+            overlay.classList.toggle('show', open);
+            openBtn.classList.toggle('open', open);
+            openBtn.setAttribute('aria-expanded', open);
+            panel.setAttribute('aria-hidden', !open);
+        }
+
+        if (panel && openBtn) {
+            openBtn.addEventListener('click', () => setPanel(!panel.classList.contains('open')));
+            if (overlay) overlay.addEventListener('click', () => setPanel(false));
+            if (closeBtn) closeBtn.addEventListener('click', () => setPanel(false));
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') setPanel(false); });
+        }
+
+        /* ---------- 3. Toggles de version (redirection) ---------- */
+        document.querySelectorAll('#options-panel input[data-href]').forEach(sw => {
+            const href = sw.getAttribute('data-href');
+            const home = sw.getAttribute('data-default') || 'index.html';
+            sw.checked = (page === href.toLowerCase());
+
+            sw.addEventListener('change', () => {
+                if (sw.checked) location.href = href;
+                else if (page === href.toLowerCase()) location.href = home;
+            });
+        });
+
+        /* ---------- 4. Année du copyright ---------- */
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        /* ---------- 5. Navbar : barre → pilule au défilement ---------- */
+        const navWrap = document.querySelector('.liquidGlass-wrapper');
+        if (navWrap) {
+            const updateNav = () => navWrap.classList.toggle('nav-scrolled', window.scrollY > 40);
+            window.addEventListener('scroll', updateNav, { passive: true });
+            updateNav();
+        }
+    })();
+    </script>
+    <!-- Scrollspy : suit la section visible pendant le défilement -->
+<script>
+(function () {
+    'use strict';
+
+    const navLinks = Array.from(
+        document.querySelectorAll('.navbar-nav .nav-link[href^="#"]')
+    );
+    if (!navLinks.length) return;
+
+    // Toutes les sections ciblées, dans l'ordre du document et dédoublonnées
+    const hrefs = navLinks
+        .map(l => l.getAttribute('href'))
+        .filter(h => h && h.length > 1);
+    const sections = Array.from(document.querySelectorAll(hrefs.join(', ')));
+    if (!sections.length) return;
+
+    const LINE = 130; // ligne de détection : juste sous la navbar
+
+    function setActive(id) {
+        navLinks.forEach(link =>
+            link.classList.toggle('active', link.getAttribute('href') === '#' + id)
+        );
+    }
+
+    let lockedUntil = 0; // évite que le scroll "corrige" pendant un défilement fluide
+
+    function onScroll() {
+        if (Date.now() < lockedUntil) return;
+
+        // La section active = la dernière dont le haut a franchi la ligne de détection
+        let currentId = sections[0].id;
+        for (const section of sections) {
+            if (section.getBoundingClientRect().top <= LINE) currentId = section.id;
+        }
+
+        // Tout en bas de page : on force la dernière section (Contact)
+        if (window.innerHeight + window.scrollY >=
+            document.documentElement.scrollHeight - 2) {
+            currentId = sections[sections.length - 1].id;
+        }
+
+        setActive(currentId);
+    }
+
+    // Au clic : feedback immédiat + verrou le temps du défilement fluide
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            setActive(link.getAttribute('href').slice(1));
+            lockedUntil = Date.now() + 1000;
+        });
+    });
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    window.addEventListener('load', onScroll);
+    onScroll();
+})();
+</script>
+</body>
+
+</html>
